@@ -1,5 +1,4 @@
 public class App {
-
     public static void main(String[] args) {
 
         Factura f = new Factura(1, "cliente", 500);
@@ -10,9 +9,7 @@ public class App {
 
         try {
             // Factura nueva = (Factura) f.clone();
-
             // nueva.setNumero(2);
-
             System.out.println(f.getNumero());
             System.out.println(f.getConcepto());
             System.out.println(f.getImporte());
@@ -23,8 +20,10 @@ public class App {
             }
 
             System.out.println("****************");
+
             Factura nueva = (Factura) f.clone();
             nueva.setNumero(2);
+
             // para cambia hascode
             // nueva.setConcepto("gonzalo");
             System.out.println(nueva.getNumero());
@@ -47,7 +46,6 @@ public class App {
                 System.out.println("Código hash objeto 2: " + nueva.hashCode());
             }
         } catch (CloneNotSupportedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
