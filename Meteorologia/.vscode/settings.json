@@ -1,0 +1,25 @@
+{
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "d:\\JavaRecuperacion\\drivers-jdbc\\sqlite-jdbc-3.43.0.0.jar"
+  ],
+  "cSpell.words": [
+    "autocommit",
+    "conexion",
+    "Conexion",
+    "jdbc",
+    "meteorologia",
+    "Meteorologia",
+    "Meteorologicos",
+    "Metereologia",
+    "precipitacion",
+    "pstmt",
+    "recuperacion",
+    "sqle",
+    "sqlec",
+    "sqler",
+    "sqlite"
+  ]
+}
