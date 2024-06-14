@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+
+<HBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="es.karames.meteorologia.controllers.VentanaPrincipalController">
+
+   <!-- TableView para los contactos -->
+   <TableView fx:id="tablaMeteorologia" prefWidth="450">
+      <columns>
+         <TableColumn text="Fecha" fx:id="columnaFecha" prefWidth="100" />
+         <TableColumn text="Precipitacion" fx:id="columnaPrecipitacion" prefWidth="100" />
+         <TableColumn text="Maxima" fx:id="columnaTemperaturaMaxima" prefWidth="100" />
+         <TableColumn text="Minima" fx:id="columnaTemperaturaMinima" prefWidth="100" />
+      </columns>
+      <HBox.margin>
+         <Insets top="20" right="20" bottom="20" left="20" />
+      </HBox.margin>
+   </TableView>
+
+   <!-- Panel para mostrar detalles del contacto seleccionado -->
+   <VBox fx:id="panelDetalles" spacing="10" alignment="CENTER" prefWidth="350" >
+
+      <!-- Labels para mostrar detalles -->
+      <Label fx:id="labelFecha" text="Fecha: " />
+      <Label fx:id="labelPrecipitacion" text="Precipitacion: " />
+      <Label fx:id="labelTemperaturaMaxima" text="Maximo: " />
+      <Label fx:id="labelTemperaturaMinima" text="Minimo: " />
+
+
+      <!-- Botones -->
+      <HBox styleClass="hboxBotones">
+         <Button styleClass="botonBorrarContacto, botonesVentanaPrincipal" fx:id="botonBorrarContacto" text="" onAction="#eliminarContacto" />
+         <Button styleClass="botonEditarContacto, botonesVentanaPrincipal" fx:id="botonEditarContacto" text="" onAction="#editarContacto" />
+         <Button styleClass="botonNuevoContacto, botonesVentanaPrincipal" fx:id="botonNuevoContacto" text="" onAction="#mostrarFormulario"/>
+      </HBox>
+
+   </VBox>
+</HBox>

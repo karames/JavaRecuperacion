@@ -1,49 +1,52 @@
 package es.karames.meteorologia.models;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+
 public class Meteorologia {
 
-    private String fecha;
-    private double precipitacion;
-    private double temperaturaMaxima;
-    private double temperaturaMinima;
+    private SimpleStringProperty fecha;
+    private SimpleDoubleProperty precipitacion;
+    private SimpleDoubleProperty temperaturaMaxima;
+    private SimpleDoubleProperty temperaturaMinima;
 
     public Meteorologia(String fecha, double precipitacion, double temperaturaMaxima, double temperaturaMinima) {
-        this.fecha = fecha;
-        this.precipitacion = precipitacion;
-        this.temperaturaMaxima = temperaturaMaxima;
-        this.temperaturaMinima = temperaturaMinima;
+        this.fecha = new SimpleStringProperty(fecha);
+        this.precipitacion = new SimpleDoubleProperty();
+        this.temperaturaMaxima = new SimpleDoubleProperty(temperaturaMaxima);
+        this.temperaturaMinima = new SimpleDoubleProperty(temperaturaMinima);
     }
 
-    public String getFecha() {
+    public SimpleStringProperty getFecha() {
         return fecha;
     }
 
     public void setFecha(String fecha) {
-        this.fecha = fecha;
+        this.fecha.set(fecha);
     }
 
-    public double getPrecipitacion() {
+    public SimpleDoubleProperty getPrecipitacion() {
         return precipitacion;
     }
 
     public void setPrecipitacion(double precipitacion) {
-        this.precipitacion = precipitacion;
+        this.precipitacion.set(precipitacion);
     }
 
-    public double getTemperaturaMaxima() {
+    public SimpleDoubleProperty getTemperaturaMaxima() {
         return temperaturaMaxima;
     }
 
     public void setTemperaturaMaxima(double temperaturaMaxima) {
-        this.temperaturaMaxima = temperaturaMaxima;
+        this.temperaturaMaxima.set(temperaturaMaxima);
     }
 
-    public double getTemperaturaMinima() {
+    public SimpleDoubleProperty getTemperaturaMinima() {
         return temperaturaMinima;
     }
 
     public void setTemperaturaMinima(double temperaturaMinima) {
-        this.temperaturaMinima = temperaturaMinima;
+        this.temperaturaMinima.set(temperaturaMinima);
     }
 
     @Override
