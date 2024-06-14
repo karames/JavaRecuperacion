@@ -229,7 +229,7 @@ public class AppMeteorologia {
      */
     public static void mainInsertarRegistro(MetereologiaDAOImp meteorologiaDAO) {
 
-        String fecha = "25-06-2024";
+        String fecha = "29-06-2024";
         double precipitacion = 9.9;
         double temperaturaMaxima = 99.9;
         double temperaturaMinima = 99.9;
